@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
 </head>
 <body>
-$END$
+    <h1>Loop & Array</h1>
+    <script>
+        var coworkers = ['KIM', 'LEE', 'PARK', 'CHOI', 'A','B'];
+    </script>
+    <h1>Co workers</h1>
+    <ul>
+        <script>
+            var i = 0;
+            while(i < coworkers.length){
+                document.write('<li><a href="http://a.com/'+coworkers[i]+'">'+coworkers[i]+'</a></li>');
+                i +=1;
+            }
+        </script>
+    </ul>
 </body>
 </html>
