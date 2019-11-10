@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
+        function LinksSetColor(color) {
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while (i < alist.length) {
+                alist[i].style.color = color;
+                i += 1;
+            }
+        }
+        function BodySetColor(color){
+            document.querySelector('body').style.color = color;
+        }
+        function BodySetBackgroundColor(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
         function nightDayHandler(self) {
             var target = document.querySelector('body');
             if (self.value === 'night') {
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
+                BodySetBackgroundColor('black');
+                BodySetColor('white');
                 self.value = 'day';
 
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = 'powderblue';
-                    i += 1;
-                }
+                LinksSetColor('powderblue');
             } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
+                BodySetBackgroundColor('white');
+                BodySetColor('black');
                 self.value = 'night';
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = 'blue';
-                    i += 1
-                }
+
+                LinksSetColor('blue');
             }
         }
     </script>
@@ -36,9 +41,7 @@
     <input type="button" value="night" onclick="
             nightDayHandler(this);
         ">
-    <input type="button" value="night" onclick="
-            nightDayHandler(this);
-        ">
+
     <ol>
         <li><a href="3.html">HTML</a></li>
         <li><a href="2.html">CSS</a></li>
