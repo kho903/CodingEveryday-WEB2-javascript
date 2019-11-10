@@ -3,45 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script>
-        var Links = {
-            SetColor: function (color) {
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = color;
-                    i += 1;
-                }
-            }
-        }
-
-
-        var Body ={
-            SetColor:function (color){
-                document.querySelector('body').style.color = color;
-            },
-            SetBackgroundColor: function (color) {
-                document.querySelector('body').style.backgroundColor = color;
-            }
-        };
-
-        function nightDayHandler(self) {
-            var target = document.querySelector('body');
-            if (self.value === 'night') {
-                Body.SetBackgroundColor('black');
-                Body.SetColor('white');
-                self.value = 'day';
-
-                Links.SetColor('powderblue');
-            } else {
-                Body.SetBackgroundColor('white');
-                Body.SetColor('black');
-                self.value = 'night';
-
-                Links.SetColor('blue');
-            }
-        }
-    </script>
+    <script src="colors.js"></script>
 </head>
     <body>
     <h1><a href="index.html">WEB</a></h1>
@@ -50,7 +12,7 @@
         ">
 
     <ol>
-        <li><a href="3.html">HTML</a></li>
+        <li><a href="1.html">HTML</a></li>
         <li><a href="2.html">CSS</a></li>
         <li><a href="3.html">JavaScript</a></li>
     </ol>
